@@ -60,7 +60,7 @@ Pomegranate depends on Ruleby (http://ruleby.org).
 
 3. **Require the gem in your code, play with it**
 
-For usage, the best thing is to click through the [documentation](http://github.com/pius/pomegranate).  I tried to make it really thorough.  If you need more guidance, check out the specs, which demonstrate precisely how to instantiate triples and run the inferencing engine.
+For usage, the best thing is to click through the [documentation](http://pius.github.com/pomegranate).  I tried to make it really thorough.  If you need more guidance, check out the specs, which demonstrate precisely how to instantiate triples and run the inferencing engine.
 
 
 4. **Contribute!**
