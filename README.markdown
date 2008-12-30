@@ -50,18 +50,17 @@ Pomegranate depends on Ruleby (http://ruleby.org).
 
   > sudo gem install ruleby
 
-2. **Install the Gem**
+2. **Clone the Repository and Install the Gem from Source**
 
-Make sure you've upgraded to RubyGems 1.2.  Then, if you've never installed a gem from GitHub before then do this:
-
-  > gem sources -a http://gems.github.com (you only have to do this once)
-
-Then:
-
-  > sudo gem install pius-pomegranate
+  > git clone git://github.com/pius/pomegranate.git 
+  > cd pomegranate
+  > gem build pomegranate.gemspec
+  > sudo gem install pomegranate
 
 
 3. **Require the gem in your code, play with it**
+
+For usage, the best thing is to click through the [documentation](http://github.com/pius/pomegranate).  I tried to make it really thorough.  If you need more guidance, check out the specs, which demonstrate precisely how to instantiate triples and run the inferencing engine.
 
 
 4. **Contribute!**
