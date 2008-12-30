@@ -19,26 +19,26 @@ FEATURE LIST
                                                                               
 1. **Pomegranate can inference over basic RDFS**: When finished, this library will have a full test suite and can serve as a maintainable reference implementation of an RDFS inferencer in Ruby.  In particular, the following statements are supported:
 
-*rdfs:subClassOf
-*rdfs:subPropertyOf
-*rdfs:domain
-*rdfs:range
+*  rdfs:subClassOf
+*  rdfs:subPropertyOf
+*  rdfs:domain
+*  rdfs:range
 
 
 2.  **Pomegranate can inference over RDFS-Plus (RDFS plus a small subset of OWL)**: RDFS-Plus, as defined in "Semantic Web for the Working Ontologist" is RDFS plus a small subset of OWL, commonly used in the field.  In particular, the following statements are supported:
 
-*rdfs:subClassOf
-*rdfs:subPropertyOf
-*rdfs:domain
-*rdfs:range
-*owl:inverseOf
-*owl:SymmetricProperty
-*owl:TransitiveProperty
-*owl:equivalentClass
-*owl:equivalentProperty
-*owl:sameAs
-*owl:FunctionalProperty
-*owl:InverseFunctionalProperty
+*  rdfs:subClassOf
+*  rdfs:subPropertyOf
+*  rdfs:domain
+*  rdfs:range
+*  owl:inverseOf
+*  owl:SymmetricProperty
+*  owl:TransitiveProperty
+*  owl:equivalentClass
+*  owl:equivalentProperty
+*  owl:sameAs
+*  owl:FunctionalProperty
+*  owl:InverseFunctionalProperty
 
 
 USAGE
