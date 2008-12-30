@@ -1,0 +1,778 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="syntax_highlight.css" type="text/css" charset="utf-8" />
+
+    <script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+    <title>Class: RdfsRulebook</title>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section class RdfsRulebook">
+  <h1 class="title">Class: RdfsRulebook</h1>
+  <div class="section inheritance">
+  <ul>
+  <li>Ruleby::Rulebook</li><ul><li>RdfsRulebook</li>
+  </ul></ul>
+</div><div class="section constants">
+  
+</div>  <div class="section visibilitygroup public">
+    <h1>Public Visibility</h1>
+      <div class="section methodsummary instance public">
+    <h1>Public Instance Method Summary</h1>
+<table class="summary">
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#rdfs_domain-instance_method' title='#rdfs_domain'>#rdfs_domain</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Type Propagation through rdfs:domain.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#rdfs_range-instance_method' title='#rdfs_range'>#rdfs_range</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Type Propagation through rdfs:range.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#rdfs_rules-instance_method' title='#rdfs_rules'>#rdfs_rules</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+nodoc.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#rdfs_sub_class_of-instance_method' title='#rdfs_sub_class_of'>#rdfs_sub_class_of</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Type Propagation through rdfs:subClassOf.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#rdfs_sub_property_of-instance_method' title='#rdfs_sub_property_of'>#rdfs_sub_property_of</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Type Propagation through rdfs:subPropertyOf.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#rules-instance_method' title='#rules'>#rules</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        
+        
+      </td>
+    </tr>
+  
+</table>
+  </div>
+<div class="section methoddetails instance public">
+  <h1>Public Instance Method Details</h1>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>rdfs_domain</h3>
+</div><div id="rdfs_domain-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>rdfs_domain</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Type Propagation through rdfs:domain
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='P constant id'>P</span> <span class='rdfs identifier id'>rdfs</span><span class='symbol val'>:domain</span> <span class='D constant id'>D</span>
+  <span class='x identifier id'>x</span> <span class='P constant id'>P</span> <span class='y identifier id'>y</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='x identifier id'>x</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='D constant id'>D</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;mit:majored_in&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:domain&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:student&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:majored_in&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Course_17&quot;</span><span class='rparen token'>)</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span>  <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;rdf:type&quot;, &quot;:student&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+124
+125</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_rulebook.rb', line 124</span>
+
+<span class='def def kw'>def</span> <span class='rdfs_domain identifier id'>rdfs_domain</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>rdfs_range</h3>
+</div><div id="rdfs_range-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>rdfs_range</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Type Propagation through rdfs:range
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='P constant id'>P</span> <span class='rdfs identifier id'>rdfs</span><span class='symbol val'>:range</span> <span class='R constant id'>R</span>
+  <span class='x identifier id'>x</span> <span class='P constant id'>P</span> <span class='y identifier id'>y</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='y identifier id'>y</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='R constant id'>R</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;mit:majored_in&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:range&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:major&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:majored_in&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Course_17&quot;</span><span class='rparen token'>)</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span>  <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;rdf:type&quot;, &quot;:student&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+153
+154</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_rulebook.rb', line 153</span>
+
+<span class='def def kw'>def</span> <span class='rdfs_range identifier id'>rdfs_range</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>rdfs_rules</h3>
+</div><div id="rdfs_rules-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>rdfs_rules</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+nodoc
+</p>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_rulebook.rb', line 42</span>
+
+<span class='def def kw'>def</span> <span class='rdfs_rules identifier id'>rdfs_rules</span>
+  
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Type Propagation through rdfs:subClassOf</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   A rdfs:subClassOf B</span>
+  <span class='comment val'>#   r rdf:type A</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   r rdf:type B</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;:Pius&quot;, &quot;rdf:type&quot;, &quot;:male&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;:male&quot;, &quot;rdfs:subClassOf&quot;, &quot;:human&quot;) </span>
+  <span class='comment val'>#   assert p; assert h;  #=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;rdf:type&quot;, &quot;:human&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  <span class='def def kw'>def</span> <span class='rdfs_sub_class_of identifier id'>rdfs_sub_class_of</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:rdfs_sub_class_of</span><span class='comma token'>,</span>
+  <span class='comment val'>#TODO: add a patch to ruleby whereby the parser will raise when there's a no method error (e.g. m.subj)</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:subj</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='symbol val'>:obj</span><span class='rbrace token'>}</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;rdf:type&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:inferred_class</span> <span class='rbrace token'>}</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;rdfs:subClassOf&quot;</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:obj</span><span class='rparen token'>)</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='symbol val'>:not</span><span class='comma token'>,</span> <span class='Triple constant id'>Triple</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:subj</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:inferred_class</span><span class='rparen token'>)</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+      <span class='inferred_class identifier id'>inferred_class</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='inferred_class identifier id'>inferred_class</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on rdfs:subClassOf: Triple(#{subj}, rdf:type, #{inferred_class})&quot;</span>  
+  <span class='end end kw'>end</span>
+  
+
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Type Propagation through rdfs:subPropertyOf</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   P rdfs:subPropertyOf R</span>
+  <span class='comment val'>#   A P B</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   A R B</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;:Pius&quot;, &quot;mit:majored_in&quot;, &quot;:Course_6&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;mit:majored_in&quot;, &quot;rdfs:subPropertyOf&quot;, &quot;mit:took_some_classes_in&quot;) </span>
+  <span class='comment val'>#   assert p; assert h;  #=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;mit:took_some_classes_in&quot;, &quot;:Course_6&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  <span class='def def kw'>def</span> <span class='rdfs_sub_property_of identifier id'>rdfs_sub_property_of</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:rdfs_sub_property_of</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='symbol val'>:pred</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:subj</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='symbol val'>:obj</span><span class='rbrace token'>}</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:inferred_pred</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;rdfs:subPropertyOf&quot;</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:pred</span><span class='rparen token'>)</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='symbol val'>:not</span><span class='comma token'>,</span> <span class='Triple constant id'>Triple</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:inferred_pred</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:subj</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:obj</span><span class='rparen token'>)</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+      <span class='inferred_property identifier id'>inferred_property</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+      <span class='obj identifier id'>obj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='inferred_property identifier id'>inferred_property</span><span class='comma token'>,</span> <span class='obj identifier id'>obj</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on subPropertyOf: Triple(#{subj},#{inferred_property}, #{obj})&quot;</span>  
+  <span class='end end kw'>end</span>
+  
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Type Propagation through rdfs:domain</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   P rdfs:domain D</span>
+  <span class='comment val'>#   x P y</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   x rdf:type D</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;mit:majored_in&quot;, &quot;rdfs:domain&quot;, &quot;:student&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;:Pius&quot;, &quot;mit:majored_in&quot;, &quot;:Course_17&quot;) </span>
+  <span class='comment val'>#   assert p; assert h;  #=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;rdf:type&quot;, &quot;:student&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  <span class='def def kw'>def</span> <span class='rdfs_domain identifier id'>rdfs_domain</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:rdfs_domain</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='symbol val'>:pred</span><span class='rbrace token'>}</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;rdfs:domain&quot;</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:pred</span><span class='rparen token'>)</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+      <span class='inferred_type identifier id'>inferred_type</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='inferred_type identifier id'>inferred_type</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on rdfs:domain: Triple(#{subj},rdf:type, #{inferred_type})&quot;</span>  
+  <span class='end end kw'>end</span>
+  
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Type Propagation through rdfs:range</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   P rdfs:range R</span>
+  <span class='comment val'>#   x P y</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   y rdf:type R</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;mit:majored_in&quot;, &quot;rdfs:range&quot;, &quot;:major&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;:Pius&quot;, &quot;mit:majored_in&quot;, &quot;:Course_17&quot;) </span>
+  <span class='comment val'>#   assert p; assert h;  #=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;rdf:type&quot;, &quot;:student&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  <span class='def def kw'>def</span> <span class='rdfs_range identifier id'>rdfs_range</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:rdfs_range</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='symbol val'>:pred</span><span class='rbrace token'>}</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;rdfs:range&quot;</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:pred</span><span class='rparen token'>)</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+      <span class='inferred_type identifier id'>inferred_type</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='inferred_type identifier id'>inferred_type</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on rdfs:range: Triple(#{subj},rdf:type, #{inferred_type})&quot;</span>  
+  <span class='end end kw'>end</span>
+  
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>rdfs_sub_class_of</h3>
+</div><div id="rdfs_sub_class_of-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>rdfs_sub_class_of</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Type Propagation through rdfs:subClassOf
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='A constant id'>A</span> <span class='rdfs identifier id'>rdfs</span><span class='symbol val'>:subClassOf</span> <span class='B constant id'>B</span>
+  <span class='r identifier id'>r</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='A constant id'>A</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='r identifier id'>r</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='B constant id'>B</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:male&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:male&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subClassOf&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:human&quot;</span><span class='rparen token'>)</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span>  <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;rdf:type&quot;, &quot;:human&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+61
+62</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_rulebook.rb', line 61</span>
+
+<span class='def def kw'>def</span> <span class='rdfs_sub_class_of identifier id'>rdfs_sub_class_of</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>rdfs_sub_property_of</h3>
+</div><div id="rdfs_sub_property_of-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>rdfs_sub_property_of</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Type Propagation through rdfs:subPropertyOf
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='P constant id'>P</span> <span class='rdfs identifier id'>rdfs</span><span class='symbol val'>:subPropertyOf</span> <span class='R constant id'>R</span>
+  <span class='A constant id'>A</span> <span class='P constant id'>P</span> <span class='B constant id'>B</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='A constant id'>A</span> <span class='R constant id'>R</span> <span class='B constant id'>B</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:majored_in&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Course_6&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;mit:majored_in&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subPropertyOf&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:took_some_classes_in&quot;</span><span class='rparen token'>)</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span>  <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;mit:took_some_classes_in&quot;, &quot;:Course_6&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+93
+94</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_rulebook.rb', line 93</span>
+
+<span class='def def kw'>def</span> <span class='rdfs_sub_property_of identifier id'>rdfs_sub_property_of</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>rules</h3>
+</div><div id="rules-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>rules</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+37
+38
+39</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_rulebook.rb', line 37</span>
+
+<span class='def def kw'>def</span> <span class='rules identifier id'>rules</span>
+  <span class='rdfs_rules identifier id'>rdfs_rules</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+</div>
+  </div>
+
+</div>
+    </div>
+  </body>
+</html>
