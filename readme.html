@@ -12,6 +12,70 @@
     <div id="content">
       <div class="section docstring readme">
         
+        <h1>Pomegranate Release 0.9 (December 30th 2008)</h1>
+
+        <p><strong>Git</strong>: <a href="http://github.com/pius/sparql">http://github.com/pius/pomegranate</a> <br /><strong>Author</strong>: Pius Uzamere, <a href="http://www.uyiosa.com">The Uyiosa Corporation</a></p>
+
+        <p><strong>Copyright</strong>: Pius Uzamere © 2008 <strong>License</strong>: The Lesser GNU Public License</p>
+
+        <h2>SYNOPSIS</h2>
+
+        <p>Pomegranate is a Ruby library for inferencing over a corpus of triples with RDFS and OWL properties. Implements the <a href="http://www.w3.org/TR/rdf-schema/">RDF Schema Language (RDFs)</a> properties as a set of production rules. The rules are executed by <a href="http://ruleby.org">Ruleby</a>, a forward-chaining Ruby inferencing engine that implements the Rete algorithm.</p>
+
+        <h2>FEATURE LIST</h2>
+
+        <ol>
+        <li><strong>Pomegranate can inference over basic RDFS</strong>: When finished, this library will have a full test suite and can serve as a maintainable reference implementation of an RDFS inferencer in Ruby. In particular, the following statements are supported:</li>
+        </ol>
+
+        <p><em>rdfs:subClassOf</em>rdfs:subPropertyOf <em>rdfs:domain</em>rdfs:range</p>
+
+        <ol>
+        <li><strong>Pomegranate can inference over RDFS-Plus (RDFS plus a small subset of OWL)</strong>: RDFS-Plus, as defined in &#8220;Semantic Web for the Working Ontologist&#8221; is RDFS plus a small subset of OWL, commonly used in the field. In particular, the following statements are supported:</li>
+        </ol>
+
+        <p><em>rdfs:subClassOf</em>rdfs:subPropertyOf <em>rdfs:domain</em>rdfs:range <em>owl:inverseOf</em>owl:SymmetricProperty <em>owl:TransitiveProperty</em>owl:equivalentClass <em>owl:equivalentProperty</em>owl:sameAs <em>owl:FunctionalProperty</em>owl:InverseFunctionalProperty</p>
+
+        <h2>USAGE</h2>
+
+        <ol>
+        <li><strong>Make Sure You&#8217;ve Got the Dependencies installed</strong></li>
+        </ol>
+
+        <p>Pomegranate depends on Ruleby (http://ruleby.org).</p>
+
+        <p>&gt; sudo gem install ruleby</p>
+
+        <ol>
+        <li><strong>Install the Gem</strong></li>
+        </ol>
+
+        <p>Make sure you&#8217;ve upgraded to RubyGems 1.2. Then, if you&#8217;ve never installed a gem from GitHub before then do this:</p>
+
+        <p>&gt; gem sources -a http://gems.github.com (you only have to do this once)</p>
+
+        <p>Then:</p>
+
+        <p>&gt; sudo gem install pius-pomegranate</p>
+
+        <ol>
+        <li>
+        <p><strong>Require the gem in your code, play with it</strong></p>
+        </li>
+
+        <li>
+        <p><strong>Contribute!</strong></p>
+        </li>
+        </ol>
+
+        <p>Fork my repository (http://github.com/pius/pomegranate), make some changes, and send along a pull request!</p>
+
+        <p>The best way to contribute is to add a unit test for a specific OWL property that does not parse and then add (and/or tweak) rules such that your new test case plus all the others pass.</p>
+
+        <h2>COPYRIGHT</h2>
+
+        <p>Pomegranate was created in 2008 by Pius Uzamere (pius -AT- alum -DOT- mit -DOT- edu) and is <br />licensed under the LGPL.</p></div></div>
+        
       </div>
     </div>
   </body>
