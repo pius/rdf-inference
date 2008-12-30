@@ -1,0 +1,1608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="syntax_highlight.css" type="text/css" charset="utf-8" />
+
+    <script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+    <title>Class: RdfsPlusRulebook</title>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section class RdfsPlusRulebook">
+  <h1 class="title">Class: RdfsPlusRulebook</h1>
+  <div class="section inheritance">
+  <ul>
+  <li>Ruleby::Rulebook</li><ul><li><a href='RdfsRulebook.html' title='RdfsRulebook'>RdfsRulebook</a></li><ul><li>RdfsPlusRulebook</li>
+  </ul></ul></ul>
+</div><div class="section constants">
+  
+</div>  <div class="section visibilitygroup public">
+    <h1>Public Visibility</h1>
+      <div class="section methodsummary instance public">
+    <h1>Public Instance Method Summary</h1>
+<table class="summary">
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#owl_equivalent_class-instance_method' title='#owl_equivalent_class'>#owl_equivalent_class</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Class Equivalence through owl:equivalentClass.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#owl_equivalent_property-instance_method' title='#owl_equivalent_property'>#owl_equivalent_property</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Property Equivalence through owl:equivalentProperty.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#owl_functional_property-instance_method' title='#owl_functional_property'>#owl_functional_property</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+owl:FunctionalProperty.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#owl_inverse_functional_property-instance_method' title='#owl_inverse_functional_property'>#owl_inverse_functional_property</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+owl:InverseFunctionalProperty.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#owl_inverse_of-instance_method' title='#owl_inverse_of'>#owl_inverse_of</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Type Propagation through owl:inverseOf.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#owl_same_as-instance_method' title='#owl_same_as'>#owl_same_as</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Individual Equivalence through owl:sameAs.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#owl_symmetric_property-instance_method' title='#owl_symmetric_property'>#owl_symmetric_property</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Type Propagation through owl:SymmetricProperty.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#owl_transitive_property-instance_method' title='#owl_transitive_property'>#owl_transitive_property</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+Implements Type Propagation through owl:TransitiveProperty.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#rdfs_plus_rules-instance_method' title='#rdfs_plus_rules'>#rdfs_plus_rules</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+def lemmas
+</p>
+<pre class="code">
+  <span class='lemmas identifier id'>lemmas</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='comment val'>#implements &quot;owl:equivalentClass&quot;</span>
+  <span class='lemmas identifier id'>lemmas</span> <span class='lshft op'>&lt;&lt;</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span>
+</pre>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        <span class='name'><a href='#rules-instance_method' title='#rules'>#rules</a></span><span class='args'></span>
+        <span class='block'></span>
+        
+      </th>
+      <td class="docstring">
+        <p>
+def initialize(e)
+</p>
+<pre class="code">
+  <span class='lemmas identifier id'>lemmas</span><span class='dot token'>.</span>
+</pre>
+
+        
+      </td>
+    </tr>
+  
+</table><div class="inherited">
+  
+  <div>
+    <h1>Public Instance Methods Inherited from <a href='RdfsRulebook.html' title='RdfsRulebook'>RdfsRulebook</a></h1>
+    <p><span class='name'><a href='RdfsRulebook.html#rdfs_domain-instance_method' title='rdfs_domain'>rdfs_domain</a></span>, <span class='name'><a href='RdfsRulebook.html#rdfs_range-instance_method' title='rdfs_range'>rdfs_range</a></span>, <span class='name'><a href='RdfsRulebook.html#rdfs_rules-instance_method' title='rdfs_rules'>rdfs_rules</a></span>, <span class='name'><a href='RdfsRulebook.html#rdfs_sub_class_of-instance_method' title='rdfs_sub_class_of'>rdfs_sub_class_of</a></span>, <span class='name'><a href='RdfsRulebook.html#rdfs_sub_property_of-instance_method' title='rdfs_sub_property_of'>rdfs_sub_property_of</a></span></p>
+  </div>
+  
+</div>
+<div class="clear"></div>
+  </div>
+<div class="section methoddetails instance public">
+  <h1>Public Instance Method Details</h1>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>owl_equivalent_class</h3>
+</div><div id="owl_equivalent_class-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>owl_equivalent_class</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Class Equivalence through owl:equivalentClass
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='A constant id'>A</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:equivalentClass</span> <span class='B constant id'>B</span>
+  <span class='r identifier id'>r</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='A constant id'>A</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='r identifier id'>r</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='B constant id'>B</span>
+
+     <span class='AND constant id'>AND</span>
+
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='C constant id'>C</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:equivalentClass</span> <span class='D constant id'>D</span>
+  <span class='C constant id'>C</span> <span class='rdfs identifier id'>rdfs</span><span class='symbol val'>:subClassOf</span> <span class='D constant id'>D</span>
+  <span class='z identifier id'>z</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='D constant id'>D</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='z identifier id'>z</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='C constant id'>C</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;mit:class&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:equivalentClass&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:subject&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:6.111&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:class&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span> <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:6.111&quot;, &quot;:rdf:type&quot;, &quot;:mit:subject&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+163
+164</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 163</span>
+
+<span class='def def kw'>def</span> <span class='owl_equivalent_class identifier id'>owl_equivalent_class</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>owl_equivalent_property</h3>
+</div><div id="owl_equivalent_property-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>owl_equivalent_property</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Property Equivalence through owl:equivalentProperty
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='A constant id'>A</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:equivalentProperty</span> <span class='B constant id'>B</span>
+  <span class='r identifier id'>r</span> <span class='A constant id'>A</span> <span class='c identifier id'>c</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='r identifier id'>r</span> <span class='B constant id'>B</span> <span class='C constant id'>C</span>
+
+     <span class='AND constant id'>AND</span>
+
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='C constant id'>C</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:equivalentClass</span> <span class='D constant id'>D</span>
+  <span class='C constant id'>C</span> <span class='rdfs identifier id'>rdfs</span><span class='symbol val'>:subClassOf</span> <span class='D constant id'>D</span>
+  <span class='z identifier id'>z</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='D constant id'>D</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='z identifier id'>z</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='C constant id'>C</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;mit:took_class&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:equivalentProperty&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:took_course&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:took_course&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:6.111&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span> <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;mit:took_class&quot;, &quot;:6.111&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+202
+203</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 202</span>
+
+<span class='def def kw'>def</span> <span class='owl_equivalent_property identifier id'>owl_equivalent_property</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>owl_functional_property</h3>
+</div><div id="owl_functional_property-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>owl_functional_property</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+owl:FunctionalProperty
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='P constant id'>P</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:FunctionalProperty</span>
+  <span class='x identifier id'>x</span> <span class='P constant id'>P</span> <span class='y identifier id'>y</span>
+  <span class='x identifier id'>x</span> <span class='P constant id'>P</span> <span class='z identifier id'>z</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='y identifier id'>y</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:sameAs</span> <span class='z identifier id'>z</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;mit:had_academic_advisor&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:FunctionalProperty&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:had_academic_advisor&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Hal&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='d identifier id'>d</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:had_academic_advisor&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Dude_Who_Wrote_SICP_With_Gerald_Sussman&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='d identifier id'>d</span><span class='semicolon token'>;</span> <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Hal&quot;, &quot;owl:sameAs&quot;, &quot;:Dude_Who_Wrote_SICP_With_Gerald_Sussman&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+298
+299</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 298</span>
+
+<span class='def def kw'>def</span> <span class='owl_functional_property identifier id'>owl_functional_property</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>owl_inverse_functional_property</h3>
+</div><div id="owl_inverse_functional_property-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>owl_inverse_functional_property</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+owl:InverseFunctionalProperty
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='P constant id'>P</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:InverseFunctionalProperty</span>
+  <span class='z identifier id'>z</span> <span class='P constant id'>P</span> <span class='x identifier id'>x</span>
+  <span class='y identifier id'>y</span> <span class='P constant id'>P</span> <span class='x identifier id'>x</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='y identifier id'>y</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:sameAs</span> <span class='z identifier id'>z</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;mit:lived_alone_fall_2004_in&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:FunctionalProperty&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:lived_alone_fall_2004_in&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:pomegranate_314_at_Next_House&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='d identifier id'>d</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:2004_UA_President&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:lived_alone_fall_2004_in&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:pomegranate_314_at_Next_House&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='d identifier id'>d</span><span class='semicolon token'>;</span> <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;owl:sameAs&quot;, &quot;:2004_UA_President&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+333
+334</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 333</span>
+
+<span class='def def kw'>def</span> <span class='owl_inverse_functional_property identifier id'>owl_inverse_functional_property</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>owl_inverse_of</h3>
+</div><div id="owl_inverse_of-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>owl_inverse_of</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Type Propagation through owl:inverseOf
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='P constant id'>P</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:inverseOf</span> <span class='Q constant id'>Q</span>
+  <span class='x identifier id'>x</span> <span class='P constant id'>P</span> <span class='y identifier id'>y</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='y identifier id'>y</span> <span class='Q constant id'>Q</span> <span class='x identifier id'>x</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:took_a_class_taught_by&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Winston&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:took_a_class_taught_by&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:inverseOf&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:taught&quot;</span><span class='rparen token'>)</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span>  <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Winston&quot;, &quot;taught&quot;, &quot;:Pius&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+59
+60</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 59</span>
+
+<span class='def def kw'>def</span> <span class='owl_inverse_of identifier id'>owl_inverse_of</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>owl_same_as</h3>
+</div><div id="owl_same_as-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>owl_same_as</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Individual Equivalence through owl:sameAs
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='x identifier id'>x</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:sameAs</span> <span class='y identifier id'>y</span>
+  <span class='o identifier id'>o</span> <span class='P constant id'>P</span> <span class='x identifier id'>x</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='o identifier id'>o</span> <span class='P constant id'>P</span> <span class='y identifier id'>y</span>
+
+     <span class='AND constant id'>AND</span>
+
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='x identifier id'>x</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:sameAs</span> <span class='y identifier id'>y</span>
+  <span class='x identifier id'>x</span> <span class='P constant id'>P</span> <span class='o identifier id'>o</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='z identifier id'>z</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='C constant id'>C</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:sameAs&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Uzamere&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;mit:took_course&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:6.171&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span> <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Uzamere&quot;, &quot;mit:took_course&quot;, &quot;:6.171&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+239
+240</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 239</span>
+
+<span class='def def kw'>def</span> <span class='owl_same_as identifier id'>owl_same_as</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>owl_symmetric_property</h3>
+</div><div id="owl_symmetric_property-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>owl_symmetric_property</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Type Propagation through owl:SymmetricProperty
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='P constant id'>P</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:SymmetricProperty</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='P constant id'>P</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:inverseOf</span> <span class='P constant id'>P</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Pius&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:was_in_a_class_with&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Adam&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:was_in_a_class_with&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:SymmetricProperty&quot;</span><span class='rparen token'>)</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span>  <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Adam&quot;, &quot;:was_in_a_class_with&quot;, &quot;:Pius&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+89
+90</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 89</span>
+
+<span class='def def kw'>def</span> <span class='owl_symmetric_property identifier id'>owl_symmetric_property</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>owl_transitive_property</h3>
+</div><div id="owl_transitive_property-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>owl_transitive_property</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+Implements Type Propagation through owl:TransitiveProperty
+</p>
+<h4>Semantics</h4>
+<pre class="code">
+  <span class='Given constant id'>Given</span><span class='colon op'>:</span>
+  <span class='P constant id'>P</span> <span class='rdf identifier id'>rdf</span><span class='symbol val'>:type</span> <span class='owl identifier id'>owl</span><span class='symbol val'>:TransitiveProperty</span>
+  <span class='X constant id'>X</span> <span class='P constant id'>P</span> <span class='Y constant id'>Y</span>
+  <span class='X constant id'>X</span> <span class='P constant id'>P</span> <span class='Z constant id'>Z</span>
+
+  <span class='Infer constant id'>Infer</span><span class='colon op'>:</span>
+  <span class='X constant id'>X</span> <span class='P constant id'>P</span> <span class='Z constant id'>Z</span>
+</pre>
+<h4>Example</h4>
+<pre class="code">
+  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Dirichlet&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:is_an_academic_ancestor_of&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Minsky&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='h identifier id'>h</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:Poisson&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:is_an_academic_ancestor_of&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;:Dirichlet&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='j identifier id'>j</span> <span class='assign token'>=</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;:is_an_academic_ancestor_of&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:TransitiveProperty&quot;</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+  <span class='assert identifier id'>assert</span> <span class='p identifier id'>p</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='h identifier id'>h</span><span class='semicolon token'>;</span> <span class='assert identifier id'>assert</span> <span class='j identifier id'>j</span><span class='semicolon token'>;</span>  <span class='comment val'>#=&gt; infers a triple ~= Triple.new(&quot;:Poisson&quot;, &quot;:is_an_academic_ancestor_of&quot;, &quot;:Minsky&quot;)</span>
+</pre>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="author">
+  <h3>Author:</h3>
+  <dl>
+  
+    <dt>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+Pius Uzamere
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+118
+119</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 118</span>
+
+<span class='def def kw'>def</span> <span class='owl_transitive_property identifier id'>owl_transitive_property</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>rdfs_plus_rules</h3>
+</div><div id="rdfs_plus_rules-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>rdfs_plus_rules</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+def lemmas
+</p>
+<pre class="code">
+  <span class='lemmas identifier id'>lemmas</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='comment val'>#implements &quot;owl:equivalentClass&quot;</span>
+  <span class='lemmas identifier id'>lemmas</span> <span class='lshft op'>&lt;&lt;</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;owl:equivalentClass&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:SymmetricProperty&quot;</span><span class='rparen token'>)</span>
+  <span class='lemmas identifier id'>lemmas</span> <span class='lshft op'>&lt;&lt;</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;owl:equivalentClass&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subPropertyOf&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subClassOf&quot;</span><span class='rparen token'>)</span>
+
+  <span class='comment val'>#implements &quot;owl:equivalentProperty&quot;</span>
+  <span class='lemmas identifier id'>lemmas</span> <span class='lshft op'>&lt;&lt;</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;owl:equivalentProperty&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:SymmetricProperty&quot;</span><span class='rparen token'>)</span>
+  <span class='lemmas identifier id'>lemmas</span> <span class='lshft op'>&lt;&lt;</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;owl:equivalentProperty&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subPropertyOf&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subPropertyOf&quot;</span><span class='rparen token'>)</span>
+
+  <span class='return return kw'>return</span> <span class='lemmas identifier id'>lemmas</span>
+</pre>
+<p>
+end nodoc
+</p>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 41</span>
+
+<span class='def def kw'>def</span> <span class='rdfs_plus_rules identifier id'>rdfs_plus_rules</span>
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Type Propagation through owl:inverseOf</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   P owl:inverseOf Q</span>
+  <span class='comment val'>#   x P y</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   y Q x</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;:Pius&quot;, &quot;:took_a_class_taught_by&quot;, &quot;:Winston&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;:took_a_class_taught_by&quot;, &quot;owl:inverseOf&quot;, &quot;:taught&quot;) </span>
+  <span class='comment val'>#   assert p; assert h;  #=&gt; infers a triple ~= Triple.new(&quot;:Winston&quot;, &quot;taught&quot;, &quot;:Pius&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  <span class='def def kw'>def</span> <span class='owl_inverse_of identifier id'>owl_inverse_of</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_inverse_of</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='symbol val'>:pred</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:new_subj</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:new_obj</span><span class='rbrace token'>}</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:inferred_pred</span><span class='rbrace token'>}</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;owl:inverseOf&quot;</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:pred</span><span class='rparen token'>)</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='symbol val'>:not</span><span class='comma token'>,</span> <span class='Triple constant id'>Triple</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:inferred_pred</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:new_subj</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:new_obj</span><span class='rparen token'>)</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+      <span class='inferred_property identifier id'>inferred_property</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='obj identifier id'>obj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+      <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='inferred_property identifier id'>inferred_property</span><span class='comma token'>,</span> <span class='obj identifier id'>obj</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on owl:inverseOf: Triple(#{subj}, #{inferred_property}, #{obj})&quot;</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Type Propagation through owl:SymmetricProperty</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   P rdf:type owl:SymmetricProperty</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   P owl:inverseOf P</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;:Pius&quot;, &quot;:was_in_a_class_with&quot;, &quot;:Adam&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;:was_in_a_class_with&quot;, &quot;rdf:type&quot;, &quot;owl:SymmetricProperty&quot;) </span>
+  <span class='comment val'>#   assert p; assert h;  #=&gt; infers a triple ~= Triple.new(&quot;:Adam&quot;, &quot;:was_in_a_class_with&quot;, &quot;:Pius&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  <span class='def def kw'>def</span> <span class='owl_symmetric_property identifier id'>owl_symmetric_property</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_symmetric_property</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='eq op'>==</span><span class='string val'>&quot;owl:SymmetricProperty&quot;</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+      <span class='prop identifier id'>prop</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='prop identifier id'>prop</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:inverseOf&quot;</span><span class='comma token'>,</span> <span class='prop identifier id'>prop</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on owl:SymmetricProperty: Triple(#{prop}, owl:inverseOf, #{prop})&quot;</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Type Propagation through owl:TransitiveProperty</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   P rdf:type owl:TransitiveProperty</span>
+  <span class='comment val'>#   X P Y</span>
+  <span class='comment val'>#   X P Z</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   X P Z</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;:Dirichlet&quot;, &quot;:is_an_academic_ancestor_of&quot;, &quot;:Minsky&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;:Poisson&quot;, &quot;:is_an_academic_ancestor_of&quot;, &quot;:Dirichlet&quot;);</span>
+  <span class='comment val'>#   j = Triple.new(&quot;:is_an_academic_ancestor_of&quot;, &quot;rdf:type&quot;, &quot;owl:TransitiveProperty&quot;); </span>
+  <span class='comment val'>#   assert p; assert h; assert j;  #=&gt; infers a triple ~= Triple.new(&quot;:Poisson&quot;, &quot;:is_an_academic_ancestor_of&quot;, &quot;:Minsky&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  <span class='def def kw'>def</span> <span class='owl_transitive_property identifier id'>owl_transitive_property</span>
+  <span class='end end kw'>end</span>
+      
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_transitive_property</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:trans_prop</span><span class='rbrace token'>}</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='eq op'>==</span><span class='string val'>&quot;owl:TransitiveProperty&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact1</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='symbol val'>:predi</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:sub</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:trans_obj</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:trans_prop</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span><span class='dot token'>.</span><span class='not identifier id'>not</span><span class='eq op'>==</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact2</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:predi</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:trans_obj</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='dot token'>.</span><span class='not identifier id'>not</span><span class='eq op'>==</span><span class='string val'>&quot;owl:inverseOf&quot;</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='dot token'>.</span><span class='not identifier id'>not</span><span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:sub</span><span class='rparen token'>)</span> <span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+      <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+      <span class='obj identifier id'>obj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='prop identifier id'>prop</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='prop identifier id'>prop</span><span class='comma token'>,</span> <span class='obj identifier id'>obj</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on owl:TransitiveProperty: Triple(#{subj}, #{prop}, #{obj})&quot;</span>
+      <span class='if if kw'>if</span> <span class='subj identifier id'>subj</span> <span class='eq op'>==</span> <span class='string val'>&quot;:Pius&quot;</span> <span class='andop op'>&amp;&amp;</span> <span class='obj identifier id'>obj</span> <span class='eq op'>==</span> <span class='string val'>&quot;:Uzamere&quot;</span> <span class='andop op'>&amp;&amp;</span> <span class='prop identifier id'>prop</span> <span class='eq op'>==</span> <span class='string val'>&quot;:is_an_academic_ancestor_of&quot;</span>
+        <span class='raise identifier id'>raise</span> <span class='string val'>&quot;ho&quot;</span> <span class='plus op'>+</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='inspect identifier id'>inspect</span> <span class='plus op'>+</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='inspect identifier id'>inspect</span> <span class='plus op'>+</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='inspect identifier id'>inspect</span>
+      <span class='end end kw'>end</span>
+      
+  <span class='end end kw'>end</span>
+  
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Class Equivalence through owl:equivalentClass</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   A owl:equivalentClass B</span>
+  <span class='comment val'>#   r rdf:type A</span>
+  <span class='comment val'>#   </span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   r rdf:type B</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#      AND</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   C owl:equivalentClass D</span>
+  <span class='comment val'>#   C rdfs:subClassOf D</span>
+  <span class='comment val'>#   z rdf:type D</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   z rdf:type C</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;mit:class&quot;, &quot;owl:equivalentClass&quot;, &quot;mit:subject&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;:6.111&quot;, &quot;rdf:type&quot;, &quot;mit:class&quot;);</span>
+  <span class='comment val'>#   assert p; assert h; #=&gt; infers a triple ~= Triple.new(&quot;:6.111&quot;, &quot;:rdf:type&quot;, &quot;:mit:subject&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  <span class='def def kw'>def</span> <span class='owl_equivalent_class identifier id'>owl_equivalent_class</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_equivalent_class</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;owl:equivalentClass&quot;</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;owl:equivalentClass&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:SymmetricProperty&quot;</span><span class='rparen token'>)</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;owl:equivalentClass&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subPropertyOf&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subClassOf&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#this is cute . . . only annoying thing is that you don't get the downstream explanation of the inferences</span>
+  <span class='end end kw'>end</span>
+  
+  
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Property Equivalence through owl:equivalentProperty</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   A owl:equivalentProperty B</span>
+  <span class='comment val'>#   r A c</span>
+  <span class='comment val'>#   </span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   r B C</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#      AND</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   C owl:equivalentClass D</span>
+  <span class='comment val'>#   C rdfs:subClassOf D</span>
+  <span class='comment val'>#   z rdf:type D</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   z rdf:type C</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;mit:took_class&quot;, &quot;owl:equivalentProperty&quot;, &quot;mit:took_course&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;:Pius&quot;, &quot;mit:took_course&quot;, &quot;:6.111&quot;);</span>
+  <span class='comment val'>#   assert p; assert h; #=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;mit:took_class&quot;, &quot;:6.111&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  
+  <span class='def def kw'>def</span> <span class='owl_equivalent_property identifier id'>owl_equivalent_property</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_equivalent_property</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;owl:equivalentProperty&quot;</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;owl:equivalentProperty&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:SymmetricProperty&quot;</span><span class='rparen token'>)</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;owl:equivalentProperty&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subPropertyOf&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdfs:subPropertyOf&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#this is cute . . . only annoying thing is that you don't get the downstream explanation of the inferences</span>
+  <span class='end end kw'>end</span>
+
+  <span class='comment val'>## </span>
+  <span class='comment val'># Implements Individual Equivalence through owl:sameAs</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   x owl:sameAs y</span>
+  <span class='comment val'>#   o P x</span>
+  <span class='comment val'>#   </span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   o P y</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#      AND</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   x owl:sameAs y</span>
+  <span class='comment val'>#   x P o</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   z rdf:type C</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;:Pius&quot;, &quot;owl:sameAs&quot;, &quot;:Uzamere&quot;); </span>
+  <span class='comment val'>#   h = Triple.new(&quot;:Pius&quot;, &quot;mit:took_course&quot;, &quot;:6.171&quot;);</span>
+  <span class='comment val'>#   assert p; assert h; #=&gt; infers a triple ~= Triple.new(&quot;:Uzamere&quot;, &quot;mit:took_course&quot;, &quot;:6.171&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  
+  <span class='def def kw'>def</span> <span class='owl_same_as identifier id'>owl_same_as</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_same_as_symmetricity</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;owl:sameAs&quot;</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+    <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;owl:sameAs&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:SymmetricProperty&quot;</span><span class='rparen token'>)</span>
+    <span class='puts identifier id'>puts</span> <span class='string val'>&quot;asserting the symmetricity of owl:sameAs&quot;</span>
+  <span class='end end kw'>end</span>
+  
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_same_as_when_subject</span><span class='comma token'>,</span>
+
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:original</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:doppelganger</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;owl:sameAs&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:p</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:common_object</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:original</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span><span class='dot token'>.</span><span class='not identifier id'>not</span><span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:doppelganger</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='dot token'>.</span><span class='not identifier id'>not</span><span class='eq op'>==</span> <span class='string val'>&quot;owl:sameAs&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='symbol val'>:not</span><span class='comma token'>,</span> <span class='Triple constant id'>Triple</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:p</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:doppelganger</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:common_object</span><span class='rparen token'>)</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+
+    <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+    <span class='pred identifier id'>pred</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span>
+    <span class='obj identifier id'>obj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+    
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on owl:sameAs: Triple(#{subj}, #{pred}, #{obj})&quot;</span>
+    <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='pred identifier id'>pred</span><span class='comma token'>,</span> <span class='obj identifier id'>obj</span><span class='rparen token'>)</span>
+    <span class='comment val'>#this is cute . . . only annoying thing is that you don't get the downstream explanation of the inferences</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_same_as_when_object</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:original</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:doppelganger</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='string val'>&quot;owl:sameAs&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:p</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:ob</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:common_subject</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:original</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='dot token'>.</span><span class='not identifier id'>not</span><span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:doppelganger</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='dot token'>.</span><span class='not identifier id'>not</span><span class='eq op'>==</span> <span class='string val'>&quot;owl:sameAs&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='symbol val'>:not</span><span class='comma token'>,</span> <span class='Triple constant id'>Triple</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:p</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:common_subject</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='eq op'>==</span><span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:doppelganger</span><span class='rparen token'>)</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+
+    <span class='obj identifier id'>obj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:ont_statement</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+    <span class='pred identifier id'>pred</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span>
+    <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+    
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on owl:sameAs: Triple(#{subj}, #{pred}, #{obj})&quot;</span>
+    <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='pred identifier id'>pred</span><span class='comma token'>,</span> <span class='obj identifier id'>obj</span><span class='rparen token'>)</span>
+    <span class='comment val'>#this is cute . . . only annoying thing is that you don't get the downstream explanation of the inferences</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='comment val'>## </span>
+  <span class='comment val'># owl:FunctionalProperty</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   P rdf:type owl:FunctionalProperty</span>
+  <span class='comment val'>#   x P y</span>
+  <span class='comment val'>#   x P z</span>
+  <span class='comment val'>#   </span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   y owl:sameAs z</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;mit:had_academic_advisor&quot;, &quot;rdf:type&quot;, &quot;owl:FunctionalProperty&quot;);</span>
+  <span class='comment val'>#   h = Triple.new(&quot;:Pius&quot;, &quot;mit:had_academic_advisor&quot;, &quot;:Hal&quot;);</span>
+  <span class='comment val'>#   d = Triple.new(&quot;:Pius&quot;, &quot;mit:had_academic_advisor&quot;, &quot;:Dude_Who_Wrote_SICP_With_Gerald_Sussman&quot;);</span>
+  <span class='comment val'>#   assert p; assert h; assert d; #=&gt; infers a triple ~= Triple.new(&quot;:Hal&quot;, &quot;owl:sameAs&quot;, &quot;:Dude_Who_Wrote_SICP_With_Gerald_Sussman&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  
+  <span class='def def kw'>def</span> <span class='owl_functional_property identifier id'>owl_functional_property</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_functional_property</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:the_prop</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span> <span class='eq op'>==</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='eq op'>==</span><span class='string val'>&quot;owl:FunctionalProperty&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact1</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:common_subject</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:first_object</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:the_prop</span><span class='rparen token'>)</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact2</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:second_object</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:common_subject</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:the_prop</span><span class='rparen token'>)</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+
+      <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      <span class='obj identifier id'>obj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='object identifier id'>object</span>
+      
+      <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on owl:FunctionalProperty: Triple(#{subj}, owl:sameAs, #{obj})&quot;</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:sameAs&quot;</span><span class='comma token'>,</span> <span class='obj identifier id'>obj</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='comment val'>## </span>
+  <span class='comment val'># owl:InverseFunctionalProperty</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Semantics</span>
+  <span class='comment val'>#   Given:</span>
+  <span class='comment val'>#   P rdf:type owl:InverseFunctionalProperty</span>
+  <span class='comment val'>#   z P x</span>
+  <span class='comment val'>#   y P x</span>
+  <span class='comment val'>#   </span>
+  <span class='comment val'>#   Infer:</span>
+  <span class='comment val'>#   y owl:sameAs z</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># ==== Example</span>
+  <span class='comment val'>#   p = Triple.new(&quot;mit:lived_alone_fall_2004_in&quot;, &quot;rdf:type&quot;, &quot;owl:FunctionalProperty&quot;);</span>
+  <span class='comment val'>#   h = Triple.new(&quot;:Pius&quot;, &quot;mit:lived_alone_fall_2004_in&quot;, &quot;:pomegranate_314_at_Next_House&quot;);</span>
+  <span class='comment val'>#   d = Triple.new(&quot;:2004_UA_President&quot;, &quot;mit:lived_alone_fall_2004_in&quot;, &quot;:pomegranate_314_at_Next_House&quot;);</span>
+  <span class='comment val'>#   assert p; assert h; assert d; #=&gt; infers a triple ~= Triple.new(&quot;:Pius&quot;, &quot;owl:sameAs&quot;, &quot;:2004_UA_President&quot;)</span>
+  <span class='comment val'>#</span>
+  <span class='comment val'># @author Pius Uzamere</span>
+  
+  <span class='def def kw'>def</span> <span class='owl_inverse_functional_property identifier id'>owl_inverse_functional_property</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='rule identifier id'>rule</span> <span class='symbol val'>:owl_inverse_functional_property</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:ont_statement</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:the_prop</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span> <span class='eq op'>==</span> <span class='string val'>&quot;rdf:type&quot;</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span><span class='eq op'>==</span><span class='string val'>&quot;owl:InverseFunctionalProperty&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact1</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:common_object</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:first_subject</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:the_prop</span><span class='rparen token'>)</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+    <span class='lbrack token'>[</span><span class='Triple constant id'>Triple</span><span class='comma token'>,</span><span class='symbol val'>:fact2</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='m identifier id'>m</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:second_subject</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='object identifier id'>object</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:common_object</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='m identifier id'>m</span><span class='dot token'>.</span><span class='predicate identifier id'>predicate</span> <span class='eq op'>==</span> <span class='b identifier id'>b</span><span class='lparen token'>(</span><span class='symbol val'>:the_prop</span><span class='rparen token'>)</span><span class='rbrack token'>]</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='v identifier id'>v</span><span class='bitor op'>|</span>
+
+      <span class='subj identifier id'>subj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+      <span class='obj identifier id'>obj</span> <span class='assign token'>=</span> <span class='v identifier id'>v</span><span class='lbrack token'>[</span><span class='symbol val'>:fact2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='subject identifier id'>subject</span>
+      
+      <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Made type inference based on owl:InverseFunctionalProperty: Triple(#{subj}, owl:sameAs, #{obj})&quot;</span>
+      <span class='assert identifier id'>assert</span> <span class='Triple constant id'>Triple</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='subj identifier id'>subj</span><span class='comma token'>,</span> <span class='string val'>&quot;owl:sameAs&quot;</span><span class='comma token'>,</span> <span class='obj identifier id'>obj</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>rules</h3>
+</div><div id="rules-instance_method" class="section method">
+  <div class="details_title">
+  <div class='section methodsignature'>
+  <tt class='def'>
+    <span class='visibility'>public</span>
+    <span class='return_types'></span>
+    <span class='name'>rules</span><span class='args'></span>
+    <span class='block'></span>
+  </tt>
+</div>
+
+</div><div class="section docstring">
+  <p>
+def initialize(e)
+</p>
+<pre class="code">
+  <span class='lemmas identifier id'>lemmas</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='lemma identifier id'>lemma</span><span class='bitor op'>|</span> <span class='e identifier id'>e</span><span class='dot token'>.</span><span class='assert identifier id'>assert</span> <span class='lemma identifier id'>lemma</span> <span class='rbrace token'>}</span>
+  <span class='super super kw'>super</span><span class='lparen token'>(</span><span class='e identifier id'>e</span><span class='rparen token'>)</span>
+</pre>
+<p>
+end
+</p>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+22
+23
+24
+25</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/pomegranate/rdfs_plus_rulebook.rb', line 22</span>
+
+<span class='def def kw'>def</span> <span class='rules identifier id'>rules</span>
+  <span class='rdfs_rules identifier id'>rdfs_rules</span>
+  <span class='rdfs_plus_rules identifier id'>rdfs_plus_rules</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+</div>
+  </div>
+
+</div>
+    </div>
+  </body>
+</html>
