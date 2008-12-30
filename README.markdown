@@ -1,7 +1,7 @@
 Pomegranate Release 0.9 (December 30th 2008) 
 ===================================
 
-**Git**:  [http://github.com/pius/pomegranate](http://github.com/pius/sparql)   
+**Git**:  [http://github.com/pius/pomegranate](http://github.com/pius/pomegranate)   
 **Author**:    Pius Uzamere, [The Uyiosa Corporation](http://www.uyiosa.com)
 
 **Copyright**: Pius Uzamere © 2008
