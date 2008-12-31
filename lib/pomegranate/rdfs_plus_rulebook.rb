@@ -325,13 +325,3 @@ class RdfsPlusRulebook < RdfsRulebook
 
   end
 end
-
-@e = engine :engine do |e|
-  RdfsPlusRulebook.new(e).rules 
-
-  p = Triple.new("mit:lived_alone_fall_2004_in", "rdf:type", "owl:InverseFunctionalProperty");
-  h = Triple.new(":Pius", "mit:lived_alone_fall_2004_in", ":pomegranate_314_at_Next_House");
-  d = Triple.new(":2004_UA_President", "mit:lived_alone_fall_2004_in", ":pomegranate_314_at_Next_House");
-  e.assert p; e.assert h; e.assert d;
-  e.match
-end
