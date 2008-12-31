@@ -109,10 +109,6 @@ class RdfsPlusRulebook < RdfsRulebook
         prop = v[:ont_statement].subject
         assert Triple.new(subj, prop, obj)
         puts "Made type inference based on owl:TransitiveProperty: Triple(#{subj}, #{prop}, #{obj})"
-        if subj == ":Pius" && obj == ":Uzamere" && prop == ":is_an_academic_ancestor_of"
-          raise "ho" + v[:ont_statement].inspect + v[:fact1].inspect + v[:fact2].inspect
-        end
-        
     end
     
     ## 
