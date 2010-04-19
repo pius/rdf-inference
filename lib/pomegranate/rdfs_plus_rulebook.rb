@@ -1,7 +1,7 @@
 # This file is part of the Pomegranate project (http://pius.github.com/pomegranate/)
 #
 # This application is free software; you can redistribute it and/or
-# modify it under the terms of the Ruby license defined in the
+# modify it under the terms of the license defined in the
 # LICENSE.txt file.
 # 
 # Copyright (c) 2008 Pius Uzamere. All rights reserved.
