@@ -11,7 +11,7 @@ RDF-Inference Release 0.0.1 (April 19th 2010)
 SYNOPSIS
 --------
 
-RDF-Inference is a Ruby library for inferencing over a corpus of triples with RDFS and OWL properties.  Implements the [RDF Schema Language (RDFs)](http://www.w3.org/TR/rdf-schema/) properties as a set of production rules.  The rules are executed by [Ruleby](http://ruleby.org), a forward-chaining Ruby inferencing engine that implements the Rete algorithm.
+RDF-Inference is a Ruby library for inferencing over a corpus of RDF::Statements with RDFS and OWL properties.  Implements the [RDF Schema Language (RDFs)](http://www.w3.org/TR/rdf-schema/) properties as a set of production rules.  The rules are executed by [Ruleby](http://ruleby.org), a forward-chaining Ruby inferencing engine that implements the Rete algorithm.
 
 
 FEATURE LIST
@@ -54,13 +54,13 @@ RDF-Inference depends on Ruleby (http://ruleby.org).
 
   > git clone git://github.com/pius/rdf-inference.git 
   > cd rdf-inference
-  > gem build rdf-inference.gemspec
+  > gem build .gemspec
   > sudo gem install rdf-inference
 
 
 3. **Require the gem in your code, play with it**
 
-For usage, the best thing is to click through the [documentation](http://pius.github.com/rdf-inference).  I tried to make it really thorough.  If you need more guidance, check out the specs, which demonstrate precisely how to instantiate triples and run the inferencing engine.
+For usage, the best thing is to click through the [documentation](http://pius.github.com/rdf-inference).  I tried to make it really thorough.  If you need more guidance, check out the specs, which demonstrate precisely how to instantiate RDF::Statements and run the inferencing engine.
 
 
 4. **Contribute!**

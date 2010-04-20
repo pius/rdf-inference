@@ -1,279 +1,138 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'><head><title>C0 code coverage information</title>
-    <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
-    <style type='text/css'>span.cross-ref-title {
- font-size: 140%;
-}
-span.cross-ref a {
- text-decoration: none;
-}
-span.cross-ref {
- background-color:#f3f7fa;
- border: 1px dashed #333;
- margin: 1em;
- padding: 0.5em;
- overflow: hidden;
-}
-a.crossref-toggle {
- text-decoration: none;
-}
-span.marked0 {
- background-color: rgb(185, 210, 200);
- display: block;
-}
-span.marked1 {
- background-color: rgb(190, 215, 205);
- display: block;
-}
-span.inferred0 {
- background-color: rgb(255, 255, 240);
- display: block;
-}
-span.inferred1 {
- background-color: rgb(255, 255, 240);
- display: block;
-}
-span.uncovered0 {
- background-color: rgb(225, 110, 110);
- display: block;
-}
-span.uncovered1 {
- background-color: rgb(235, 120, 120);
- display: block;
-}
-span.overview {
- border-bottom: 8px solid black;
-}
-div.overview {
- border-bottom: 8px solid black;
-}
-body {
- font-family: verdana, arial, helvetica;
-}
-div.footer {
- font-size: 68%;
- margin-top: 1.5em;
-}
-h1, h2, h3, h4, h5, h6 {
- margin-bottom: 0.5em;
-}
-h5 {
- margin-top: 0.5em;
-}
-.hidden {
- display: none;
-}
-div.separator {
- height: 10px;
-}
-/* Commented out for better readability, esp. on IE */
-/*
-table tr td, table tr th {
- font-size: 68%;
-}
-td.value table tr td {
- font-size: 11px;
-}
-*/
-table.percent_graph {
- height: 12px;
- border: #808080 1px solid;
- empty-cells: show;
-}
-table.percent_graph td.covered {
- height: 10px;
- background: #00f000;
-}
-table.percent_graph td.uncovered {
- height: 10px;
- background: #e00000;
-}
-table.percent_graph td.NA {
- height: 10px;
- background: #eaeaea;
-}
-table.report {
- border-collapse: collapse;
- width: 100%;
-}
-table.report td.heading {
- background: #dcecff;
- border: #d0d0d0 1px solid;
- font-weight: bold;
- text-align: center;
-}
-table.report td.heading:hover {
- background: #c0ffc0;
-}
-table.report td.text {
- border: #d0d0d0 1px solid;
-}
-table.report td.value,
-table.report td.lines_total,
-table.report td.lines_code {
- text-align: right;
- border: #d0d0d0 1px solid;
-}
-table.report tr.light {
- background-color: rgb(240, 240, 245);
-}
-table.report tr.dark {
- background-color: rgb(230, 230, 235);
-}
-</style>
-    <script type='text/javascript'>
-// <![CDATA[
-  function toggleCode( id ) {
-    if ( document.getElementById )
-      elem = document.getElementById( id );
-    else if ( document.all )
-      elem = eval( "document.all." + id );
-    else
-      return false;
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <title>Rdf Inference C0 Coverage Information - RCov</title>
+    <link href="screen.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="print.css" media="print" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="rcov.js"></script>
+  </head>
+  <body>
+    <h1>Rdf Inference C0 Coverage Information - RCov</h1>
+    
 
-    elemStyle = elem.style;
+    <noscript><style type="text/css">.if_js { display:none; }</style></noscript>
 
-    if ( elemStyle.display != "block" ) {
-      elemStyle.display = "block"
-    } else {
-      elemStyle.display = "none"
-    }
+    <div class="filters if_js">
+      <fieldset>
+        <label>File Filter:</label>
+        <select id="file_filter" class="filter">
+          <option value="all_files">Show All</option>
+          <option value="lib">lib/</option><option value="pomegranate">pomegranate/</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <label>Code Coverage Threshold:</label>
+        <select id="coverage_filter" class="filter">
+          <option value="all_coverage">Show All</option>
+          <option value="10">&lt; 10% Coverage</option><option value="20">&lt; 20% Coverage</option><option value="30">&lt; 30% Coverage</option><option value="40">&lt; 40% Coverage</option><option value="50">&lt; 50% Coverage</option><option value="60">&lt; 60% Coverage</option><option value="70">&lt; 70% Coverage</option><option value="80">&lt; 80% Coverage</option><option value="90">&lt; 90% Coverage</option><option value="100">&lt; 100% Coverage</option>
+          <option value="110">= 100% Coverage</option>
+        </select>
+      </fieldset>
+    </div>
+    
+    <div class="report_table_wrapper">
+      <table class='report' id='report_table'>
+        <thead>
+          <tr>
+            <th class="left_align">Name</th>
+            <th class="right_align">Total Lines</th>
+            <th class="right_align">Lines of Code</th>
+            <th class="left_align">Total Coverage</th>
+            <th class="left_align">Code Coverage</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td class="left_align">TOTAL</td>
+            <td class='right_align'><tt>534</tt></td>
+            <td class='right_align'><tt>180</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>91.95%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:92px"></div>
+            <div class="uncovered" style="width:8px"></div>
+          </div></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class='coverage_total'>80.56%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:81px"></div>
+            <div class="uncovered" style="width:19px"></div>
+          </div></td>
+          </tr>
+        </tfoot>
+        <tbody>
+          
+            <tr class="all_files all_coverage 110 lib even">
+              <td class="left_align"><a href="lib-pomegranate_rb.html">lib/pomegranate.rb</a></td>
+              <td class='right_align'><tt>29</tt></td>
+              <td class='right_align'><tt>12</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 90 100 lib pomegranate odd">
+              <td class="left_align"><a href="lib-pomegranate-rdfs_rulebook_rb.html">lib/pomegranate/rdfs_rulebook.rb</a></td>
+              <td class='right_align'><tt>175</tt></td>
+              <td class='right_align'><tt>63</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>96.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:96px"></div>
+            <div class="uncovered" style="width:4px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>88.89%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:89px"></div>
+            <div class="uncovered" style="width:11px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 80 90 100 lib pomegranate even">
+              <td class="left_align"><a href="lib-pomegranate-rdfs_plus_rulebook_rb.html">lib/pomegranate/rdfs_plus_rulebook.rb</a></td>
+              <td class='right_align'><tt>330</tt></td>
+              <td class='right_align'><tt>105</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>89.09%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:89px"></div>
+            <div class="uncovered" style="width:11px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>73.33%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:73px"></div>
+            <div class="uncovered" style="width:27px"></div>
+          </div></td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    
+    <p>Generated on Mon Apr 19 20:00:22 -0400 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
-    return true;
-  }
+    <script type="text/javascript">
+      $(document).ready(function(){$("#report_table").tablesorter({widgets: ['zebra'], textExtraction: 'complex'});});
+      $('.filter').change(function(){
+        ff = $('#file_filter').val();
+        cf = $('#coverage_filter').val();
+        $('table#report_table tbody tr').each(function(i){ 
+          if ((this.className.split(" ").indexOf(ff) > -1) && (this.className.split(" ").indexOf(cf) > -1)) {
+            this.style.display = "";
+          } else {
+            this.style.display = "none";
+          };
+          restripe();
+        })
+      })
+    </script>
 
-  // Make cross-references hidden by default
-  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
-  // ]]>
-</script>
-    </head>
-  <body><h3>C0 code coverage information</h3>
-    <p>Generated on Tue Dec 30 10:28:10 -0500 2008 with <a href='http://eigenclass.org/hiki/rcov'>rcov 0.8.1.3</a>
-      </p>
-    <hr/>
-    <table class='report'><thead><tr><td class='heading'>Name</td>
-      <td class='heading'>Total lines</td>
-      <td class='heading'>Lines of code</td>
-      <td class='heading'>Total coverage</td>
-      <td class='heading'>Code coverage</td>
-      </tr>
-    </thead>
-  <tbody><tr class='light'><td>TOTAL</td>
-      <td class='lines_total'><tt>558</tt>
-        </td>
-      <td class='lines_code'><tt>203</tt>
-        </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>98.9%</tt>
-              &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='99'/>
-                  <td class='uncovered' width='1'/>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>97.5%</tt>
-              &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='98'/>
-                  <td class='uncovered' width='2'/>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    <tr class='dark'><td><a href='lib-pomegranate_rb.html'>lib/pomegranate.rb</a>
-        </td>
-      <td class='lines_total'><tt>29</tt>
-        </td>
-      <td class='lines_code'><tt>11</tt>
-        </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>100.0%</tt>
-              &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='100'/>
-                  <td class='uncovered' width='0'/>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>100.0%</tt>
-              &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='100'/>
-                  <td class='uncovered' width='0'/>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    <tr class='light'><td><a href='lib-pomegranate-rdfs_plus_rulebook_rb.html'>lib/pomegranate/rdfs_plus_rulebook.rb</a>
-        </td>
-      <td class='lines_total'><tt>341</tt>
-        </td>
-      <td class='lines_code'><tt>116</tt>
-        </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>98.8%</tt>
-              &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='99'/>
-                  <td class='uncovered' width='1'/>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>97.4%</tt>
-              &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='97'/>
-                  <td class='uncovered' width='3'/>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    <tr class='dark'><td><a href='lib-pomegranate-rdfs_rulebook_rb.html'>lib/pomegranate/rdfs_rulebook.rb</a>
-        </td>
-      <td class='lines_total'><tt>188</tt>
-        </td>
-      <td class='lines_code'><tt>76</tt>
-        </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>98.9%</tt>
-              &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='99'/>
-                  <td class='uncovered' width='1'/>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>97.4%</tt>
-              &nbsp;</td>
-            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='97'/>
-                  <td class='uncovered' width='3'/>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-<hr/>
-    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
-   version 0.8.1.3.</p>
-<p><a href='http://validator.w3.org/check/referer'><img src='http://www.w3.org/Icons/valid-xhtml11' height='31' alt='Valid XHTML 1.1!' width='88'/>
-        </a>
-      <a href='http://jigsaw.w3.org/css-validator/check/referer'><img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px'/>
-        </a>
-      </p>
-    </body>
-  </html>
+  </body>
+</html>
